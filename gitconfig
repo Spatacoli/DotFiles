@@ -1,0 +1,11 @@
+[core]
+  editor=vim
+  excludesfile=~/.gitignore
+[color]
+  ui=true
+[user]
+  name=Todd Spatafore
+  email=tspata4@spatacoli.com
+[alias]
+  prettylog=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %CC(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  cdiff=diff --color
