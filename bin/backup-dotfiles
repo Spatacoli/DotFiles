@@ -56,6 +56,24 @@ cp $HOME/.ssh/config    ./.ssh/config
 git add ./.ssh/config
 git commit -m "update SSH config"
 
+cp $HOME/.gitconfig   ./.gitconfig
+git add ./.gitconfig
+git commit -m "update gitconfig"
+
+cp $HOME/.gitignore   ./.gitignore
+git add ./.gitignore
+git commit -m "update gitignroe"
+
+cp $HOME/.conkyrc ./.conkyrc
+git add ./.conkyrc
+git commit -m "update conky config"
+
+# create local .config dir if non-existent
+[[ ! -d ./.config ]] && mkdir ./.config && echo "Creating new local .config folder for git..."
+cp $HOME/.config/archey3.cfg ./.config/archey3.cfg
+git add ./.config/archey3.cfg
+git commit -m "update archey config file"
+
 # create local etc dir if non-existent
 [[ ! -d ./etc ]] && mkdir ./etc && echo "Creating new local etc folder for git..."
 
