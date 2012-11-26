@@ -15,8 +15,8 @@ Xft.dpi:                    96
 Xft.rgba:                   rgb
 
 URxvt.depth:                32
-URxvt.font:                 xft:dejavu sans mono:medium:size=10.5
-URxvt.boldFont:             xft:dejavu sans mono:bold:size=10.5
+URxvt.font:                 xft:source code pro:medium:size=11
+URxvt.boldFont:             xft:source code pro:bold:size=11
 URxvt*scrollBar_right:      false
 URxvt*scrollBar:            false
 URxvt*borderLess:           false
@@ -41,8 +41,6 @@ URxvt.keysym.F11:           perl:fullscreen:switch
 xterm*toolBar:              false
 xterm*scrollBar:            false
 xterm*rightScrollBar:       false
-xterm*background:           #1A1A1A
-xterm*foreground:           #A9A9A9
 xterm*font:                 -*-terminus-medium-*-*-*-16-*-*-*-*-*-iso8859-*
 xterm*geometry:             120x28
 
