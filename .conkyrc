@@ -9,8 +9,8 @@ net_avg_samples 200
 use_xft no
 xftfont Terminus:size=8
 update_interval 1
-minimum_size 1024 10
-maximum_width 1024
+minimum_size 1440 10
+maximum_width 1440
 border_width 1
 draw_outline no
 default_color white
@@ -20,5 +20,4 @@ no_buffers yes
 uppercase no
 
 TEXT
-${alignc}$nodename ${color #0100ff} Uptime:${color white} $uptime ${color #0077ff} | CPU:${color #0077ff} ${color white}$cpu%${color #0077ff} | FS: ${color lightgray}${fs_used /}/${fs_size /}${color #0077ff} | /home: ${color lightgrey}${fs_used /home}/${fs_size /home}${color #0077ff} | RAM: ${color white}$mem ${color #0077ff}
-${alignc}Network:${color white} ${wireless_essid wlan0} ${color #0077ff} | Down: ${color white}${downspeed wlan0} ${color #0077ff} | Up: ${color white}${upspeed wlan0} ${color #0077ff} | Battery: ${color white}${battery BAT0} ${battery_time BAT0} ${color #0077ff} | Volume: ${color white}${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%
+${alignc}$nodename ${color #0100ff} Uptime:${color white} $uptime ${color #0077ff} | CPU:${color #0077ff} ${color white}$cpu%${color #0077ff} | /: ${color lightgray}${fs_used /}/${fs_size /}${color #0077ff} | /home: ${color lightgrey}${fs_used /home}/${fs_size /home}${color #0077ff} | RAM: ${color white}$mem ${color #0077ff} | Network:${color white} ${wireless_essid wlan0} ${color #0077ff} | Down: ${color white}${downspeed wlan0} ${color #0077ff} | Up: ${color white}${upspeed wlan0} ${color #0077ff} | Battery: ${color white}${battery BAT0} ${battery_time BAT0} ${color #0077ff} | Volume: ${color white}${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%
