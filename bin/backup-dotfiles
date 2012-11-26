@@ -68,6 +68,10 @@ cp $HOME/.conkyrc ./.conkyrc
 git add ./.conkyrc
 git commit -m "update conky config"
 
+cp -r $HOME/.colors ./.colors
+git add ./.colors
+git commit -m "updating local colors"
+
 # create local .config dir if non-existent
 [[ ! -d ./.config ]] && mkdir ./.config && echo "Creating new local .config folder for git..."
 cp $HOME/.config/archey3.cfg ./.config/archey3.cfg
