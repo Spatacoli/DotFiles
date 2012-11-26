@@ -4,14 +4,17 @@
 # <file system>	<dir>	<type>	<options>	<dump>	<pass>
 tmpfs		/tmp	tmpfs	nodev,nosuid	0	0
 # /dev/sda3
-UUID=a8121bdb-cb26-4558-8322-a98d9cc0486e	/         	ext4      	rw,relatime	0 1
+UUID=17bdf058-54b2-4a24-800a-d1ad53b2467d	/         	ext4      	rw,relatime	0 1
 
 # /dev/sda2
-UUID=03c89df2-e159-44f1-86d9-2ba5f96da080	/boot     	ext4      	rw,relatime	0 2
+UUID=a483922b-5bcb-412f-a964-a2c365b20f39	/boot     	ext2      	rw,relatime	0 2
 
 # /dev/sda4
-UUID=81dcf7c6-05cc-4694-944c-54fba4bc5136	/home     	ext4      	rw,relatime	0 2
+UUID=01fd147e-fe41-428d-bcb0-7a35d05af3eb	/var      	ext4      	rw,relatime	0 2
 
 # /dev/sda5
-UUID=8b4bd730-53d7-4ef3-a813-27df034640e3	none      	swap      	defaults  	0 0
+UUID=542b5223-61b6-4391-8fc4-3b4717b58bd2	/home     	ext4      	rw,relatime	0 2
 
+# Commenting this out because it slows boot down too much
+# ashley:/Multimedia
+#ashley:/Multimedia	/data/Multimedia	nfs4	rsize=8192,wsize=8192,timeo=14,intr	0 0
