@@ -139,6 +139,6 @@ cp -r $HOME/.dwm/patches ./dwm/
 git add ./dwm/patches
 git commit -m "update dwm patches"
 
-git push
+git push origin master
 cd $SF
 exit 0
