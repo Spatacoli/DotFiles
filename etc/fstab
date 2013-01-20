@@ -2,19 +2,20 @@
 # /etc/fstab: static file system information
 #
 # <file system>	<dir>	<type>	<options>	<dump>	<pass>
-tmpfs		/tmp	tmpfs	nodev,nosuid	0	0
 # /dev/sda3
-UUID=17bdf058-54b2-4a24-800a-d1ad53b2467d	/         	ext4      	rw,relatime	0 1
+UUID=62b79514-9c04-4d58-a0ee-4bfd7476af50	/         	ext4      	rw,relatime	0 1
 
 # /dev/sda2
-UUID=a483922b-5bcb-412f-a964-a2c365b20f39	/boot     	ext2      	rw,relatime	0 2
+UUID=afda4956-e168-4730-ad4f-450595dc216f	/boot     	ext2      	rw,relatime	0 2
 
 # /dev/sda4
-UUID=01fd147e-fe41-428d-bcb0-7a35d05af3eb	/var      	ext4      	rw,relatime	0 2
+UUID=c923446e-bbbf-4a28-95a7-a8d8253b7daf	/var      	ext4      	rw,relatime	0 2
 
 # /dev/sda5
-UUID=542b5223-61b6-4391-8fc4-3b4717b58bd2	/home     	ext4      	rw,relatime	0 2
+UUID=1f48803a-4f25-4e9c-b529-997c313143e1	/home     	ext4      	rw,relatime	0 2
 
-# Commenting this out because it slows boot down too much
-# ashley:/Multimedia
-#ashley:/Multimedia	/data/Multimedia	nfs4	rsize=8192,wsize=8192,timeo=14,intr	0 0
+# /dev/sda6
+UUID=5dd7c2cb-4538-4279-8589-5869bfc136ee	none      	swap      	defaults  	0 0
+
+# /dev/VolGroup00/datadrive
+UUID=569456b5-e08f-4b9a-9be7-aea96b1c4338	/data		ext4		rw,relatime	0 2
