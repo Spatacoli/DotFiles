@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rdesktop -g 1400x800 -P -z -x l -r sound:local -u administrator victoria:3389 &
