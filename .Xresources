@@ -1,0 +1,48 @@
+URxvt.buffered:             true
+URxvt.cursorColor:          #5E468C
+URxvt.cursorBlink:          false
+URxvt.geometry:             80x22
+URxvt*urgentOnBell:         true
+URxvt.lineSpace:            1
+URxvt.letterSpace:          -1
+
+Xft.autohint:               0
+Xft.lcdfilter:              lcddefault
+Xft.hintstyle:              hintslight
+Xft.hinting:                1
+Xft.antialias:              1
+Xft.dpi:                    96
+Xft.rgba:                   rgb
+
+URxvt.depth:                32
+URxvt.font:                 xft:source code pro:medium:size=11
+URxvt.boldFont:             xft:source code pro:bold:size=11
+URxvt*scrollBar_right:      false
+URxvt*scrollBar:            false
+URxvt*borderLess:           false
+URxvt*termName:             screen-256color
+URxvt.perl-ext-common:      default.matcher
+URxvt.urlLauncher:          /usr/bin/chromium-browser
+URxvt.matcher.button:       1
+URxvt.keysym.C-Delete:      perl:matcher:last
+URxvt.keysym.M-Delete:      perl:matcher:list
+URxvt.colorUL:              #4682B4
+URxvt.perl-ext:             default.url.select
+URxvt.keysym.M-u:           perl:uri-select:select_next
+URxvt.url-select.launcher:  /usr/bin/chromium-browser
+URxvt.url-select.underline: true
+URxvt.perl-ext-common:      default,tabbed,fullscreen
+URxvt.tabbed.tabbar-fg:     2
+URxvt.tabbed.tabbar-bg:     0
+URxvt.tabbed.tab-fg:        3
+URxvt.tabbed.tab-bg:        0
+URxvt.keysym.F11:           perl:fullscreen:switch
+
+xterm*toolBar:              false
+xterm*scrollBar:            false
+xterm*rightScrollBar:       false
+xterm*font:                 -*-terminus-medium-*-*-*-16-*-*-*-*-*-iso8859-*
+xterm*geometry:             120x28
+
+
+#include  "/home/todd/.colors/dark"
