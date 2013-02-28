@@ -1,12 +1,10 @@
 #!/bin/bash
 
 # Git Update File contains:
-# - DWM
 # - Systemd
 # - .bashrc, .vimrc, .Xresources, .xinitrc
 # - local bin folder
 # - local fonts folder
-# - common customized etc files
 # - fancy MARKDOWN file
 
 SF=$(pwd)
@@ -24,7 +22,7 @@ if [[ $1 == "clean" ]]; then
     git rm -r *
     git rm *
     git commit -m "clean git repo"
-    echo "![ArchLinux](https://www.archlinux.org/static/logos/archlinux-logo-black-scalable.svg)" > README.md
+    echo "These are my dot files for Linux. Currently using Arch. They are a work in progress and if anyone is looking at them and think there's something I can do better please let me know. Thanks" > README.md
     git add README.md
     git commit -m "add README"
     git push
@@ -81,38 +79,9 @@ git commit -m "update archey config file"
 # create local etc dir if non-existent
 [[ ! -d ./etc ]] && mkdir ./etc && echo "Creating new local etc folder for git..."
 
-[[ ! -d ./etc/default ]] && mkdir ./etc/default && echo "Creating new local etc/default folder for git..."
-cp /etc/default/grub    ./etc/default/grub
-git add ./etc/default/grub
-git commit -m "update default grub config"
-
-[[ ! -d ./etc/modules-load.d ]] && mkdir ./etc/modules-load.d
-cp /etc/modules-load.d/modules.conf ./etc/modules-load.d/modules.conf
-git add ./etc/modules-load.d/modules.conf
-git commit -m "update modules config"
-
-# create local etc/pm dir if non-existent
-[[ ! -d ./etc/pm ]] && mkdir ./etc/pm && echo "Creating new local etc/pm folder for git..."
-
-cp -r /etc/pm/power.d   ./etc/pm/
-git add ./etc/pm/power.d
-git commit -m "update pm-utils powersave scripts"
-
-cp -r /etc/rules.d      ./etc/
-git add ./etc/rules.d
-git commit -m "update udev rules"
-
 cp /etc/mkinitcpio.conf ./etc/mkinitcpio.conf
 git add ./etc/mkinitcpio.conf
 git commit -m "update mkinitcpio conf"
-
-cp /etc/fstab           ./etc/fstab
-git add ./etc/fstab
-git commit -m "update filesystem table"
-
-cp /etc/vconsole.conf   ./etc/vconsole.conf
-git add ./etc/vconsole.conf
-git commit -m "update virtual console config"
 
 # create local etc/systemd dir if non-existent
 [[ ! -d ./etc/systemd ]] && mkdir ./etc/systemd && echo "Creating new local etc/systemd folder for git..."
@@ -128,16 +97,6 @@ git commit -m "update custom systemd files"
 cp -r $HOME/.fonts      ./
 git add ./.fonts
 git commit -m "update custom fonts"
-
-[[ ! -d ./dwm ]] && mkdir ./dwm && echo "Creating new local dwm folder for git..."
-cp $HOME/.dwm/config.h  ./dwm/config.h
-git add ./dwm/config.h
-git commit -m "update dwm config"
-
-[[ ! -d ./dwm/patches ]] && mkdir ./dwm/patches && echo "Creating new local dwm/patches folder for git..."
-cp -r $HOME/.dwm/patches ./dwm/
-git add ./dwm/patches
-git commit -m "update dwm patches"
 
 git push origin master
 cd $SF
