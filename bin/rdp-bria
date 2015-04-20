@@ -1,3 +1,0 @@
-#!/bin/sh
-
-rdesktop -g 1400x800 -P -z -x l -r sound:local -u todd@thetodd.com bria:3389 &
